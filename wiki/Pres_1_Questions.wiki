@@ -1,0 +1,7 @@
+- what file type is being sent over from the client to the server?
+- are we encrypting files?
+- is there password protection?
+- can the servers external media be used for archiving?
+- are we saving old versions of backups on the server that we can roll back to?
+- what platforms do we support?
+- does the incremental backup initially feed off the full backup?
