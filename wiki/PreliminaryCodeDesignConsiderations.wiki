@@ -1,4 +1,4 @@
-#(Incomplete List of things to consider for code design.  This List can and should be added to.)
+#summary (Incomplete List of things to consider for code design.  This List can and should be added to.)
 =Code Design List=
 
 == Details ==
