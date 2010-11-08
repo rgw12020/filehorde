@@ -1,5 +1,4 @@
-#summary One-sentence summary of this page.
-
+#summary This is the requirements document.
 = Backup Utility Rough Requirements =
 *Overview*
 
@@ -78,97 +77,101 @@ Optionally, the session may indicate a program that can indicate whether a
 given file should be fully backed up or if a delta back-up should be performed.
 
 *Use Case: Adding a file*
-
+{{{
 Goal:
-The user wants to add one or more files or directories to a session.
-Resources
-Existing session definitions.
-User actions
-Select a session by browsing the existing sessions.
-Open a file browser over the actual file system.
-Select one or more directories
-Optionally, indicate one or more files
-The files may be indicated by selecting them, by typing their names or
-described using the wild card system of the underlying file system.
-The user may choose to modify the options for these files.
-The user may choose to repeat this sequence, starting at any point.
-Product action
-The session definition is updated
-
+     The user wants to add one or more files or directories to a session.
+Resources:
+     Existing session definitions.
+User actions:
+     Select a session by browsing the existing sessions.
+     Open a file browser over the actual file system.
+     Select one or more directories
+     Optionally, indicate one or more files
+     The files may be indicated by selecting them, by typing their names or described using the wild card system of the underlying file system.
+     The user may choose to modify the options for these files.
+     The user may choose to repeat this sequence, starting at any point.
+Product action:
+     The session definition is updated
+}}}
 *Use Case: Creating a session*
-
-Goal
-The user wants to create a new session.
-Resources
-existing session definitions
-User actions
-Request a new session
-Indicate whether session is local
-Indicate whether session is incremental
-If incremental, indicated any linked sessions
-Indicate frequency session should be backed-up
-Indicate approximate starting time for back-ups
-Add files to session
-Save the session
-Product action
-The new session definition is created
-
+{{{
+Goal:
+     The user wants to create a new session.
+Resources:
+     existing session definitions
+User actions:
+     Request a new session
+     Indicate whether session is local
+     Indicate whether session is incremental
+     If incremental, indicated any linked sessions
+     Indicate frequency session should be backed-up
+     Indicate approximate starting time for back-ups
+     Add files to session
+     Save the session
+Product action:
+     The new session definition is created
+}}}
 *Restoring a file Use Case*
-
-Goal
-The user wants to restore a specific file from a specific date.
-Resources
-Historic session backups.
-User actions
-Open a file browser over the actual file system.
-Select one or more files or directories
-Request a restore of the file
-Indicate what date the restored file should be from.
-Optionally, indicate where the file should be restored to. (the default is to
-restore it to its original location)
-Product action
-The system indicates whether the indicated file is available from the desired
-date.
-The file is restored to its previous state at the appropriate location.
-
+{{{
+Goal:
+     The user wants to restore a specific file from a specific date.
+Resources:
+     Historic session backups.
+User actions:
+     Open a file browser over the actual file system.
+     Select one or more files or directories
+     Request a restore of the file
+     Indicate what date the restored file should be from.
+     Optionally, indicate where the file should be restored to. (the default is to restore it to its original location)
+Product action:
+     The system indicates whether the indicated file is available from the desired date.
+     The file is restored to its previous state at the appropriate location.
+}}}
 *Finding a previous version Use Case*
-
-Goal
-The user wants to restore a specific file, but is unsure when the file was in the
+{{{
+Goal:
+     The user wants to restore a specific file, but is unsure when the file was in the
 desired state.
-Resources
-Historic session backups.
-User actions
-Open a file browser over the backed-up file system.
-Select a file.
-Request information on backed-up versions
-Indicate which version to restore.
-Optionally, indicate where the file should be restored to. (the default is to
-restore it to its original location)
-Product action
-The system displays the requested information.
-The file is restored to its previous state at the appropriate location.
-
+Resources:
+     Historic session backups.
+User actions:
+     Open a file browser over the backed-up file system.
+     Select a file.
+     Request information on backed-up versions
+     Indicate which version to restore.
+     Optionally, indicate where the file should be restored to. (the default is to restore it to its original location)
+Product action:
+     The system displays the requested information.
+     The file is restored to its previous state at the appropriate location.
+}}}
 *Non-functional requirements*
 
 Platform: The client side must be accessible from at least two of the three
 common platforms, Windows, Mac and Linux. The program will support at least
 cd-r drives and cd-rw drives as a removable media.
+
 Performance: A local session, without encryption or delta back-ups, should be
 able to back-up at least 1 megabyte per second. A remote session, with
 encryption, compression and delta-backups all enabled, should be able to backup
 50kbytes/second, as measured by original file size.
+
 Security: Only the originating user or the system administrator should be able
 to access the remote backup files.
+
 Users: The system administrator is assumed to be computer savvy, with the
 ability to learn complex tools and diagnose issues. The end user is presumed to
 have simple computer literacy skills only, such as copying files.
+
 Scale: The product must be able to relate to support backups including 1000's
 of files including multiple megabytes.
+
 Data: Other than file format specific to delta backups, no file format
 information can be assumed.
+
 The product will not support any internationalization features and will be run in
 an office environment.
+
 The product is not expected to be enhanced beyond the initial version.
+
 The prototype of the product is required by early December. No slippage is
 allowed.
