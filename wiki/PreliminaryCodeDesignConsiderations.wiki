@@ -1,6 +1,5 @@
-#summary One-sentence summary of this page.
+#(Incomplete List of things to consider for code design.  This List can and should be added to.)
 =Code Design List=
-(Incomplete List of things to consider for code design.  This List can and should be added to.)
 
 == Details ==
 (Feel free to add to this as necessary.)
