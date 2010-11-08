@@ -1,9 +1,9 @@
 #summary (Incomplete List of things to consider for code design.  This List can and should be added to.)
 =Code Design List=
 
-== Details ==
 (Feel free to add to this as necessary.)
 
+==Details==
 This is a list of *_possible_* classes, class members, and methods in no particular order:
 
   * ClientSideManager
