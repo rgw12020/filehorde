@@ -1,0 +1,84 @@
+#summary This Page Outlines the code design and gives details for each element.
+
+= Code Design Details =
+
+==Classes Overview==
+There are two peices that are to be considered. The server side and the client side.
+===Client Side===
+  * ClientManager
+  * User
+  * Job
+  * Version
+  * RemovableMedia
+===Server Side===
+  * Servermanager
+  * UserList
+  * User
+  * DataRepository
+  * Version
+
+
+
+== Class Details ==
+===ClientManager===
+====Members====
+  * string serverSocket
+  * string serverAddress
+  * boolean online
+  * directory tempBufferStorageDir
+  * string LoginTime
+====Methods====
+  * string getLoginTime()
+  * void setLoginTime()
+  * void restoreBackup()
+  * void checkAllJobs()
+===User===
+====Members====
+  * string userID
+  * list{{{<job>}}} JobsAssociated
+  * string password
+====Methods====
+  * string getUserID()
+  * void setUserID(string)
+  * job getJob()
+  * void addJob(job)
+  * list listAllJobs()
+  * string getUserPassword()
+  * void setUserPassword()
+  * boolean AuthnticateUser()
+===Job===
+====Members====
+  * string creatorID
+  * list{{{<string>}}} directories
+  * string BackupTime
+  * string jobName
+  * boolean IncOrFull
+  * float currentVersion
+  * string startTime
+====Methods====
+  * string getCreatorID()
+  * void setCreatorID(string)
+  * string getBackupTime()
+  * void setBackupTime(string)
+  * string getJobName()
+  * void setJobName(string)
+  * boolean getIncOrFull()
+  * void setIncOrFull(boolean)
+  * float getCurrentVersion()
+  * void setCurrentVersion(float)
+  * string getStartTime()
+  * void setStartTime(string)
+  * void sendBackup()
+  * void addFilesAndDirectories()
+===Version===
+====Members====
+  * float version
+  * string date
+  * string lastBackup
+====Methods====
+  * float getVersion()
+  * void setVersion(float)
+  * string getDate()
+  * void setDate(string)
+  * string getLastBackup()
+  * void setLastBackup()
