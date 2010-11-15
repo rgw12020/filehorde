@@ -22,63 +22,63 @@ There are two peices that are to be considered. The server side and the client s
 == Class Details ==
 ===ClientManager===
 ====Members====
-  * string serverSocket
-  * string serverAddress
-  * boolean online
-  * directory tempBufferStorageDir
-  * string LoginTime
+  * string serverSocket   _//predetermined socket for communication with the server_
+  * string serverAddress   _//address of the server_
+  * boolean online   _//used to indicate whether the server is online or not_
+  * directory tempBufferStorageDir   _//location of the buffer storage directory_
+  * string loginTime   _//time the user logged on to the system_
 ====Methods====
-  * string getLoginTime()
-  * void setLoginTime()
-  * void restoreBackup()
-  * void checkAllJobs()
+  * string getLoginTime()  _//accessor for loginTime variable_
+  * void setLoginTime()   _//mutator for loginTime variable_
+  * void restoreBackup()   _//recieves a backup from server and restores to proper directory_
+  * void checkAllJobs()  _//checks all jobs to see if they are scheduled for backup_
 ===User===
 ====Members====
-  * string userID
-  * list{{{<job>}}} JobsAssociated
-  * string password
+  * string userID   _//the user's login ID_
+  * list{{{<job>}}} JobsAssociated   _//jobs that the user has access to_
+  * string password   _//the user's password, used in login and authentication_
 ====Methods====
-  * string getUserID()
-  * void setUserID(string)
-  * job getJob()
-  * void addJob(job)
-  * list listAllJobs()
-  * string getUserPassword()
-  * void setUserPassword()
-  * boolean AuthnticateUser()
+  * string getUserID()   _//accessor for user's ID_
+  * void setUserID(string)  _//mutator for user's ID_
+  * job getJob()   _//accessor for specific job in job list_
+  * void addJob(job)  _//adds a job to the job list_
+  * list listAllJobs()   _//lists all jobs in the job list_
+  * string getUserPassword()   _//accessor for user password(user must be authenticated to use this function)_
+  * void setUserPassword()   _//mutator for user password(user must be authenticated to use this function)_
+  * boolean AuthnticateUser()   _//Checks if user ID and Password match an entry on server in the userList_
 ===Job===
 ====Members====
-  * string creatorID
-  * list{{{<string>}}} directories
-  * string BackupTime
-  * string jobName
-  * boolean IncOrFull
-  * float currentVersion
-  * string startTime
+  * string creatorID   _//user's id who created the job_
+  * list{{{<string>}}} directories  _//list of directories and files associated with job (files to backup)_
+  * string BackupTime   _//This is the time schedule time to execute backup operation_
+  * string jobName   _//This is a unique job name to identify the job_
+  * boolean IncOrFull  _//if true then job is incremental if false job is full_
+  * version currentVersion  _//current version number of job_
+  * string startTime  _//time describing when to execute backup for the first time_
 ====Methods====
-  * string getCreatorID()
-  * void setCreatorID(string)
-  * string getBackupTime()
-  * void setBackupTime(string)
-  * string getJobName()
-  * void setJobName(string)
-  * boolean getIncOrFull()
-  * void setIncOrFull(boolean)
-  * float getCurrentVersion()
-  * void setCurrentVersion(float)
-  * string getStartTime()
-  * void setStartTime(string)
-  * void sendBackup()
-  * void addFilesAndDirectories()
+  * string getCreatorID()  _//accessor for creatorID_
+  * void setCreatorID(string)  _//mutator for creatorID_
+  * string getBackupTime()  _//accessor for backupTime_
+  * void setBackupTime(string)  _//mutator for backupTime_
+  * string getJobName()  _//accessor for jobName_
+  * void setJobName(string)  _//mutator for jobName_
+  * boolean getIncOrFull()  _//accessor for incOrFull_
+  * void setIncOrFull(boolean)  _//mutator for incOrFull_
+  * version getCurrentVersion()  _//accessor for currentVersion_
+  * void setCurrentVersion(version)  _//mutator for currentVersion_
+  * string getStartTime()  _//accessor for startTime_
+  * void setStartTime(string)  _//mutator for startTime_
+  * void sendBackup()  _//executes backup by sending the backup file/files_
+  * void addFilesAndDirectories()  _//adds a file or directory to directories list_
 ===Version===
 ====Members====
-  * float version
-  * string date
-  * string lastBackup
+  * float version  _//version number_
+  * string date  _//date of version_
+  * string lastBackup  _//date of the previous version_
 ====Methods====
-  * float getVersion()
-  * void setVersion(float)
-  * string getDate()
-  * void setDate(string)
-  * string getLastBackup()
-  * void setLastBackup()
+  * float getVersion()  _//accessor for version number_
+  * void setVersion(float)  _//mutator for version number_
+  * string getDate()  _//accessor for date_
+  * void setDate(string)  _//mutator for date_
+  * string getLastBackup()  _//accessor for lastBackup_
+  * void setLastBackup()  _//mutator for lastBackup _
