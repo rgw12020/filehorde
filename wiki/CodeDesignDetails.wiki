@@ -45,7 +45,7 @@ There are two peices that are to be considered. The server side and the client s
   * list listAllJobs()   _//lists all jobs in the job list_
   * string getUserPassword()   _//accessor for user password(user must be authenticated to use this function)_
   * void setUserPassword()   _//mutator for user password(user must be authenticated to use this function)_
-  * boolean AuthnticateUser()   _//Checks if user ID and Password match an entry on server in the userList_
+  * boolean AuthenticateUser()   _//Checks if user ID and Password match an entry on server in the userList_
 ===Job===
 ====Members====
   * string creatorID   _//user's id who created the job_
