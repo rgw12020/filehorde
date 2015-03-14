@@ -1,0 +1,12 @@
+**10/25**
+Final System Design due
+first presentation
+
+status reports every Wednesday there after
+
+**11/10**
+Code Design due
+second presentation
+
+**12/8**
+Project due, final presentation

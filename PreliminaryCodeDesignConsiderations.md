@@ -1,0 +1,46 @@
+# Code Design List #
+
+(Feel free to add to this as necessary.)
+
+## Details ##
+This is a list of **_possible_** classes, class members, and methods in no particular order:
+
+  * ClientSideManager
+  * ServerSideManager
+  * BackupRecord
+  * Session
+  * User
+  * AdministrativeUser
+  * RestoreProgram
+  * UserInterface
+  * IncrementalBackup
+  * FullBackup
+  * SendToServer
+  * RequestFromServer
+  * SendToClient
+  * CreateRecoveryMedia
+  * FilesAndDirectoriesList
+  * Schedule
+  * IncrementalSession
+  * FullSession
+  * File
+  * Directory
+  * ArchivalSession
+  * NonArchivalSession
+  * CompleteFileSetList (this is a complete list of all files available for restore on individual basis)
+  * SessionList
+  * LocalDiskOnlySession
+  * BackupFailedWarningWindow
+  * AddFileToSession
+  * CreateSession
+  * LinkedSessions
+  * RestoreFile
+  * BackupVersion
+  * BackupVersionList
+  * SessionName
+  * SessionDate
+  * SessionLocation(local, server, or media)
+  * Session’s User
+  * UserSignIn
+  * FullRepository
+  * IncrementalRepository

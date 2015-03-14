@@ -1,0 +1,1 @@
+File Horde is a clean and simple file backup program for the windows platform. It is a class project for Software Engineering that will be loosely based on Dropbox and TortoiseSVN.
